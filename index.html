@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>demo</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!-- <link href="css/public.css" rel="stylesheet"> -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+		<style>
+			.header {
+				height: 40px;
+				background-color: #2AABD2;
+				color: #ffffff;
+				font-size: 18px;
+			}
+
+			.title {
+				margin: 8px auto;
+			}
+
+			.footer {
+				/* height: 120px; */
+				font-size: 18px;
+				text-align: center;
+				box-shadow: 0px -1px 10px lightgray;
+			}
+
+			.fo {
+				background-color: #ffffff;
+			}
+			.fo img{
+				padding-top: 10px;
+				width:20%;
+			}
+
+			.main {
+				width: 100%;
+				height: 600px;
+				margin: 100px auto;
+			}
+
+			.msg {
+				width: 100%;
+				margin: 10px auto;
+				box-shadow: 0 0 10px #DDDDDD;
+			}
+
+			.mp {
+				text-indent: 0.5em;
+				font-size: 20px;
+			}
+
+			.pubdiv {
+				float: left;
+				margin: 10px 0;
+				width: 42%;
+				margin-left: 5%;
+				text-align: center;
+			}
+
+			.div1 {
+				width: 90%;
+				margin: 10px auto;
+			}
+
+			.div1 p {
+				margin: auto;
+				padding: 5px 0px;
+			}
+			.div1 .p1{
+				color:lightgray;
+			}
+			.div1 .p2{
+				font-size:16px;
+			}
+			.img{
+				width:20%;
+			}
+			.img,.p1{
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.con{
+				width:90%;
+				
+			}
+			.conTitle{
+				font-size: 18px;
+				padding:8px 0;
+				border-bottom: 1px solid #C0C0C0;
+			}
+			.conTitle img{
+				width:20%;
+			}
+			.concent { margin:10px auto; width:100%; max-width:350px; min-width:220px;}
+			.box { white-space:nowrap; overflow-x:auto; }						
+			.box::-webkit-scrollbar { width:0; height:0; display: none; }  
+			.box div { list-style:none; display:inline-block; width:130px; line-height:30px; margin:2px 10px; 
+			text-align:center;border:1px solid lightgray;box-shadow: 0 0 10px #D4D4D4; }
+			/* .box p { width:100%;} */
+			.boxImg{margin:0;text-align: left;margin-left: 10px;margin-top:10px;width:30px;}
+			.boxMsg{margin:0;text-align: left;margin-left: 10px;margin-bottom:10px;width:30px;}
+			.box b { width:100%;color:darkgray;}
+			.box div:last-child { margin:0 10px; }
+			.box img{
+				width:100%;
+			}
+		</style>
+		<script src="js/jquery-1.11.1.min.js"></script>
+
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript">
+			var u = navigator.userAgent;
+			var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1;
+			var isUc = u.indexOf('UCBrowser') > -1;
+			if (isAndroid && isUc) {
+				$('.box').on('touchstart', function() {
+					$(document).on('touchmove', function(e) {
+						e.preventDefault();
+					});
+					$(document).on('touchend', function() {
+						$(document).unbind();
+					});
+				});
+				}
+				$(function() {
+					$(".home").css("color", "#31B0D5");
+					$(".second").click(function(e) {
+						$(".img2").attr("src", "img/6_1.png");
+						window.location.href = "second.html";
+
+						//水波纹效果开始
+						// var _this = $(this);
+						// var px = e.offsetX;
+						// var py = e.offsetY;
+						// 
+						// var id = parseInt(Math.random() * 1000);
+						// _this.append('<div class="second-style" style="top:' + py + 'px;left:' + px + 'px;background:' + _this.attr(
+						// 	'data-clickColor') + '" id="wb_' + id + '"></div>');
+						// setTimeout(function() {
+						// 	_this.find('#wb_' + id).remove()
+						// }, 3000)
+						//水波纹效果结束
+
+					});
+					$(".my").click(function() {
+						$(".img2").attr("src", "img/7_1.png");
+						window.location.href = "my.html";
+					})
+				})
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-fixed-top">
+			<div class="container-fluid">
+				<div class="row header">
+					<div class="col-xs-6 title">全部电站</div>
+					<div class="col-xs-6 title" style="text-align: right;"><img src="img/8_1.png" width="15%"/></div>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container main">
+
+			<p class="mp">电站信息</p>
+			<div class="row msg">
+				<div class="container con">
+
+					<p class="conTitle"><img src="img/0.png" />总装机容量5.63MWP</p>
+					<div class="pubdiv">
+						<div class="div1">
+							<img class="img" src="img/1.png" />
+							<span class="p1">本月发电量</span>
+							<p class="p2">691.47MWh</p>
+						</div>
+
+					</div>
+					<div class="pubdiv">
+						<div class="div1">
+							<img class="img" src="img/2.png" />
+							<span class="p1">本年发电量</span>
+							<p class="p2">691.47MWh</p>
+						</div>
+					</div>
+					<div class="pubdiv">
+						<div class="div1">
+							<img class="img" src="img/3.png" />
+							<span class="p1">累计发电量</span>
+							<p class="p2">691.47MWh</p>
+						</div>
+					</div>
+					<div class="pubdiv">
+						<div class="div1">
+							<img class="img" src="img/4.png" />
+							<span class="p1">全部电站</span>
+							<p class="p2">691.47MWh</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<p class="mp">节能减排</p>
+			<div class="concent">
+				<div class="box">
+					<div>
+						<p class="boxImg"><img src="img/二氧化硫.png"/></p>
+						<b>二氧化碳减排(吨)</b>
+						<p class="boxMsg">4232.93</p>
+					</div>
+					<div>
+						<p class="boxImg"><img src="img/二氧化碳.png"/></p>
+						<b>二氧化硫减排(吨)</b>
+						<p class="boxMsg">4232.93</p>
+					</div>
+					<div>
+						<p class="boxImg"><img src="img/烟尘.png"/></p>
+						<b>烟尘减排量(吨)</b>
+						<p class="boxMsg">4232.93</p>
+					</div>
+					<div>
+						<p class="boxImg"><img src="img/排放.png"/></p>
+						<b>节约标准煤(吨)</b>
+						<p class="boxMsg">4232.93</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<nav class="navbar navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="row footer">
+					<div class="col-xs-4 fo">
+						<img class="img1" src="img/5.png" />
+						<p class="home">首页</p>
+					</div>
+					<div class="col-xs-4 fo">
+						<img class="img2" src="img/6.png" />
+						<p class="second">电站</p>
+					</div>
+					<div class="col-xs-4 fo">
+						<img class="img3" src="img/7.png" />
+						<p class="my">我的</p>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</body>
+</html>
